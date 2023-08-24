@@ -1,0 +1,95 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 33
+
+    defaultConfig {
+        applicationId "id.net.uninet.azwar_uninet"
+        buildConfigField "boolean", "HIDDEN_APP", "false"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true //important
+        vectorDrawables.useSupportLibrary true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+        merge '**/LICENSE.txt'
+        merge '**/NOTICE.txt'
+    }
+    lintOptions {
+        checkReleaseBuilds false // Add this
+        abortOnError false
+
+        disable 'GoogleAppIndexingWarning'
+        baseline file("lint-baseline.xml")
+    }
+//    dataBinding {
+//        enabled = true
+//    }
+
+    dataBinding.enabled = true
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.material:material:1.6.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // youtube
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:12.1.0'
+
+    // custom nav bar
+    implementation 'nl.joery.animatedbottombar:library:1.0.4'
+
+    // fancy toast
+    implementation 'com.github.Shashank02051997:FancyToast-Android:0.1.8'
+
+    // gson
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    // butter knife
+    implementation 'com.jakewharton:butterknife-annotations:10.2.3'
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+
+    // material dialog
+    implementation 'com.afollestad.material-dialogs:commons:0.9.0.1'
+
+    // circle image view
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    // volley
+    implementation 'com.android.volley:volley:1.2.1'
+
+    // glide
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}
