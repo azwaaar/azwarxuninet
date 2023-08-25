@@ -22,16 +22,22 @@ Untuk belajar agar mengurangi kesenjangan pendidikan teknologi dengan cara membu
 
 ## Screen Shoot
 
+DASHBOARD
 ![dashboard](https://github.com/azwaaar/azwarxuninet/assets/57070912/92421891-3da2-418b-b525-b7b94fa75694)
 
+DETAIL
 ![detail](https://github.com/azwaaar/azwarxuninet/assets/57070912/8f2fc06e-d143-47ad-8b14-5051b8e38d23)
 
+REVIEW
 ![review](https://github.com/azwaaar/azwarxuninet/assets/57070912/2a8ffdb9-7592-4b1a-9db6-a6f35aac1241)
 
+CAST
 ![cast](https://github.com/azwaaar/azwarxuninet/assets/57070912/21819996-0cac-49ed-80d0-17fcae0252a9)
 
+TV SHOW
 ![tv_show](https://github.com/azwaaar/azwarxuninet/assets/57070912/e06051aa-6c90-4c7e-921c-3f4a845127a6)
 
+PROFILE
 ![profile](https://github.com/azwaaar/azwarxuninet/assets/57070912/7fce3785-e5fd-420e-9e02-909ba360c6ed)
 
 
